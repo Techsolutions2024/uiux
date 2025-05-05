@@ -7,10 +7,10 @@ class RegisterPage(ft.UserControl):
         super().__init__()
         self.page = page
         self.navigate_to = navigate_to
-        self.name_field = create_text_field("Họ tên", icon=ft.icons.PERSON)
-        self.email_field = create_text_field("Email", icon=ft.icons.EMAIL)
-        self.password_field = create_text_field("Mật khẩu", password=True, icon=ft.icons.LOCK)
-        self.confirm_password_field = create_text_field("Xác nhận mật khẩu", password=True, icon=ft.icons.LOCK)
+        self.name_field = create_text_field("Họ tên", emoji="🧑‍💼")
+        self.email_field = create_text_field("Email", emoji="📧")
+        self.password_field = create_text_field("Mật khẩu", password=True, emoji="🔐")
+        self.confirm_password_field = create_text_field("Xác nhận mật khẩu", password=True, emoji="🔐")
         self.terms_agreement = ft.Checkbox(label="Đồng ý điều khoản sử dụng", value=False)
 
     def register_clicked(self, e):
@@ -48,7 +48,7 @@ class RegisterPage(ft.UserControl):
                 self.terms_agreement,
                 ft.Row(
                     [
-                        create_button("Đăng ký",  create_button("Đăng ký", self.register_clicked, icon=ft.icons.PERSON_ADD)),
+                        create_button("Đăng ký", self.register_clicked, emoji="🧑‍💼"),
                         create_button("Quay lại", lambda e: self.navigate_to(e, "login")),
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,

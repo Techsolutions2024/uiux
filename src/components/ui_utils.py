@@ -1,28 +1,17 @@
 import flet as ft
 
-def create_gradient_background():
-    return ft.Container(
-        content=ft.Stack(expand=True),
-        gradient=ft.LinearGradient(
-            begin=ft.alignment.top_left,
-            end=ft.alignment.bottom_right,
-            colors=[
-                ft.colors.BLUE_900,  # Màu xanh dương đậm
-                ft.colors.PURPLE_900,  # Màu tím đậm
-                ft.colors.BLUE_500,  # Màu xanh dương nhạt
-            ],
-        ),
-        width=400,
-        height=600,
-    )
+def create_icon(emoji, size=20):
+    return ft.Text(emoji, size=size)
 
-def create_icon(icon_name, color=ft.colors.WHITE):
-    return ft.Icon(name=icon_name, color=color, size=20)
-
-def create_button(text, on_click, icon=None):
+def create_button(text, on_click, emoji=None):
     return ft.ElevatedButton(
-        text=text,
-        icon=icon,
+        content=ft.Row(
+            [
+                ft.Text(emoji, size=20) if emoji else ft.Container(),
+                ft.Text(text),
+            ],
+            spacing=5,
+        ),
         bgcolor=ft.colors.BLUE_700,
         color=ft.colors.WHITE,
         on_click=on_click,
@@ -32,13 +21,13 @@ def create_button(text, on_click, icon=None):
         ),
     )
 
-def create_text_field(label, password=False, icon=None):
+def create_text_field(label, password=False, emoji=None):
     return ft.TextField(
         label=label,
         password=password,
         can_reveal_password=password,
         border_radius=8,
-        prefix_icon=icon,
+        prefix=ft.Text(emoji, size=20) if emoji else None,
         bgcolor=ft.colors.with_opacity(0.9, ft.colors.WHITE),
         border_color=ft.colors.BLUE_700,
     )
@@ -54,7 +43,7 @@ def create_ad_container():
                     color=ft.colors.WHITE,
                 ),
                 ft.Image(
-                    src="assets/images/ad_image.jpg",  # Thay bằng đường dẫn thực tế
+                    src="assets/images/ad.jpg",
                     width=350,
                     height=400,
                     fit=ft.ImageFit.COVER,

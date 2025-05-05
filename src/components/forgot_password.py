@@ -6,7 +6,7 @@ class ForgotPasswordPage(ft.UserControl):
         super().__init__()
         self.page = page
         self.navigate_to = navigate_to
-        self.email_field = create_text_field("Email", icon=ft.icons.EMAIL)
+        self.email_field = create_text_field("Email", emoji="📧")
 
     def reset_clicked(self, e):
         email = self.email_field.value
@@ -27,7 +27,7 @@ class ForgotPasswordPage(ft.UserControl):
                 self.email_field,
                 ft.Row(
                     [
-                        create_button("Gửi liên kết", self.reset_clicked, icon=ft.icons.SEND),
+                        create_button("Gửi liên kết", self.reset_clicked, emoji="📨"),
                         create_button("Quay lại", lambda e: self.navigate_to(e, "login")),
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,

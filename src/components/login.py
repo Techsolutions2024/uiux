@@ -1,14 +1,14 @@
 import flet as ft
 from services.auth import authenticate_user
-from components.ui_utils import create_text_field, create_button, create_icon
+from components.ui_utils import create_text_field, create_button
 
 class LoginPage(ft.UserControl):
     def __init__(self, page, navigate_to):
         super().__init__()
         self.page = page
         self.navigate_to = navigate_to
-        self.email_field = create_text_field("Email", icon=ft.icons.EMAIL)
-        self.password_field = create_text_field("Mật khẩu", password=True, icon=ft.icons.LOCK)
+        self.email_field = create_text_field("Email", emoji="📧")
+        self.password_field = create_text_field("Mật khẩu", password=True, emoji="🔐")
         self.remember_me = ft.Checkbox(label="Ghi nhớ đăng nhập", value=False)
 
     def login_clicked(self, e):
@@ -37,7 +37,7 @@ class LoginPage(ft.UserControl):
                 self.remember_me,
                 ft.Row(
                     [
-                        create_button("Đăng nhập", self.login_clicked, icon=ft.icons.LOGIN),
+                        create_button("Đăng nhập", self.login_clicked, emoji="🔐"),
                         create_button("Quên MK?", lambda e: self.navigate_to(e, "forgot_password")),
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,

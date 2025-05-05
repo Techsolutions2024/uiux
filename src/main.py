@@ -9,8 +9,7 @@ def main(page: ft.Page):
     page.window.width = 800
     page.window.height = 600
     page.window.resizable = True
-    page.padding  # Tắt padding mặc định
-    page.bgcolor = ft.colors.TRANSPARENT
+    page.padding = 0
 
     # Tạo layout chính: bên trái là form, bên phải là quảng cáo
     def navigate_to(e, route):
@@ -28,26 +27,36 @@ def main(page: ft.Page):
         content=LoginPage(page, navigate_to),
         width=400,
         height=600,
-        bgcolor=ft.colors.with_opacity(0.95, ft.colors.BLACK),
+        bgcolor=ft.colors.with_opacity(0.95, ft.colors.CYAN_200),
         border_radius=10,
         alignment=ft.alignment.center,
     )
 
-    # Layout chính với background image
+    # Layout chính với gradient background toàn màn hình
     page.add(
-        ft.Container(
-            content=ft.Row(
-                [
-                    form_container,  # Form cố định bên trái
-                    create_ad_container(),  # Quảng cáo bên phải
-                ],
-                expand=True,
-                alignment=ft.MainAxisAlignment.START,
-            ),
-            image_src="assets/images/background.jpg",
-            image_fit=ft.ImageFit.COVER,
-            width=800,
-            height=600,
+        ft.Stack(
+            [
+                ft.Container(
+                    gradient=ft.LinearGradient(
+                        begin=ft.alignment.top_left,
+                        end=ft.alignment.bottom_right,
+                        colors=[
+                            ft.colors.BLUE_300,  # Xanh dương nhạt
+                            ft.colors.BLUE_700,  # Xanh dương đậm
+                            ft.colors.WHITE,     # Trắng
+                        ],
+                    ),
+                    expand=True,  # Bao phủ toàn màn hình
+                ),
+                ft.Row(
+                    [
+                        form_container,  # Form cố định bên trái
+                        create_ad_container(),  # Quảng cáo bên phải
+                    ],
+                    alignment=ft.MainAxisAlignment.START,
+                ),
+            ],
+            expand=True,
         )
     )
 
