@@ -6,12 +6,12 @@ from components.ui_utils import create_ad_container
 
 def main(page: ft.Page):
     page.title = "Hệ thống Quản trị Camera"
-    page.window.width = 800
-    page.window.height = 600
+    page.window.width = 1920
+    page.window.height = 1080
     page.window.resizable = True
     page.padding = 0
 
-    # Tạo layout chính: bên trái là form, bên phải là quảng cáo
+    # Tạo layout chính: định vị form và quảng cáo theo pixel
     def navigate_to(e, route):
         form_container.content = None
         if route == "login":
@@ -22,12 +22,12 @@ def main(page: ft.Page):
             form_container.content = ForgotPasswordPage(page, navigate_to)
         page.update()
 
-    # Khung cố định cho form (bên trái)
+    # Khung cố định cho form
     form_container = ft.Container(
         content=LoginPage(page, navigate_to),
         width=400,
         height=600,
-        bgcolor=ft.colors.with_opacity(0.95, ft.colors.CYAN_200),
+        bgcolor=ft.colors.with_opacity(0.95, ft.colors.CYAN_800),
         border_radius=10,
         alignment=ft.alignment.center,
     )
@@ -41,19 +41,24 @@ def main(page: ft.Page):
                         begin=ft.alignment.top_left,
                         end=ft.alignment.bottom_right,
                         colors=[
-                            ft.colors.BLUE_300,  # Xanh dương nhạt
-                            ft.colors.BLUE_700,  # Xanh dương đậm
-                            ft.colors.WHITE,     # Trắng
+                            ft.colors.BLUE_300,
+                            ft.colors.BLUE_700,
+                            ft.colors.WHITE,
                         ],
                     ),
-                    expand=True,  # Bao phủ toàn màn hình
+                    expand=True,
                 ),
-                ft.Row(
-                    [
-                        form_container,  # Form cố định bên trái
-                        create_ad_container(),  # Quảng cáo bên phải
-                    ],
-                    alignment=ft.MainAxisAlignment.START,
+                ft.Container(
+                    content=form_container,
+                    left=50,
+                    top=50,
+                    height=600,
+                    width=400,
+                ),
+                ft.Container(
+                    content=create_ad_container(),
+                    left=400,
+                    top=50,
                 ),
             ],
             expand=True,
