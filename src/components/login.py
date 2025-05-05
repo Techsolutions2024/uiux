@@ -31,7 +31,7 @@ class LoginPage(ft.UserControl):
     def build(self):
         return ft.Column(
             [
-                ft.Text("Đăng nhập", size=24, weight=ft.FontWeight.BOLD, color=ft.colors.WHITE),
+                ft.Text("Đăng nhập", size=24, weight=ft.FontWeight.BOLD, color=ft.colors.BLUE_400),
                 self.email_field,
                 self.password_field,
                 self.remember_me,
@@ -45,7 +45,7 @@ class LoginPage(ft.UserControl):
                 ft.TextButton(
                     "Chưa có tài khoản? Đăng ký ngay",
                     on_click=lambda e: self.navigate_to(e, "register"),
-                    style=ft.ButtonStyle(color=ft.colors.WHITE),
+                    style=ft.ButtonStyle(color=ft.colors.BLUE_400),
                 ),
             ],
             alignment=ft.MainAxisAlignment.CENTER,

@@ -27,7 +27,7 @@ def main(page: ft.Page):
         content=LoginPage(page, navigate_to),
         width=400,
         height=600,
-        bgcolor=ft.colors.with_opacity(0.95, ft.colors.CYAN_800),
+        bgcolor=ft.colors.with_opacity(0.95, ft.colors.BLACK),
         border_radius=10,
         alignment=ft.alignment.center,
     )
@@ -53,11 +53,11 @@ def main(page: ft.Page):
                     left=50,
                     top=50,
                     height=600,
-                    width=400,
+                    
                 ),
                 ft.Container(
                     content=create_ad_container(),
-                    left=400,
+                    left=500,
                     top=50,
                 ),
             ],

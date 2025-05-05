@@ -61,7 +61,7 @@ def create_text_field(label, password=False, emoji=None):
         can_reveal_password=password,
         border_radius=8,
         prefix=ft.Text(emoji, size=20) if emoji else None,
-        bgcolor=ft.colors.with_opacity(0.9, ft.colors.WHITE),
+        bgcolor=ft.colors.with_opacity(0.9, ft.colors.RED_200),
         border_color=ft.colors.BLUE_700,
     )
 
