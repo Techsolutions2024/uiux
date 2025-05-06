@@ -22,99 +22,66 @@ def create_main_layout(page: ft.Page):
         expand=False,
     )
 
-    # Module cards data: title and description
+    # Module buttons data: title and color
     modules = [
-        {
-            "title": "Quản lý Thiết bị",
-            "desc": "Camera, Cảm biến IoT, trạng thái thiết bị",
-        },
-        {
-            "title": "Phân tích & Sự kiện AI",
-            "desc": "Nhận diện, cảnh báo, phân tích dự đoán",
-        },
-        {
-            "title": "Quản lý Người dùng",
-            "desc": "Phân quyền, nhật ký, xác thực hai yếu tố (2FA)",
-        },
-        {
-            "title": "Giám sát Trực tiếp",
-            "desc": "Live View, PTZ, trạng thái camera",
-        },
-        {
-            "title": "Lưu trữ & Phát lại",
-            "desc": "Video, metadata, tìm kiếm, xuất video",
-        },
-        {
-            "title": "Báo cáo & Phân tích",
-            "desc": "Dashboard, dự đoán, báo cáo tùy chỉnh",
-        },
-        {
-            "title": "Cảnh báo & Thông báo",
-            "desc": "Email, SMS, app, lịch sử thông báo",
-        },
-        {
-            "title": "Bảo mật & Cài đặt",
-            "desc": "Mã hóa, backup, audit, kiểm tra bảo mật",
-        },
-        {
-            "title": "Tích hợp & Tùy chỉnh",
-            "desc": "ONVIF, RESTful API, SDK, giao thức IoT",
-        },
+        {"title": "Quản lý Thiết bị", "color": ft.colors.BLUE_400},
+        {"title": "Phân tích & Sự kiện AI", "color": ft.colors.GREEN_400},
+        {"title": "Quản lý Người dùng", "color": ft.colors.ORANGE_400},
+        {"title": "Giám sát Trực tiếp", "color": ft.colors.PURPLE_400},
+        {"title": "Lưu trữ & Phát lại", "color": ft.colors.RED_400},
+        {"title": "Báo cáo & Phân tích", "color": ft.colors.TEAL_400},
+        {"title": "Cảnh báo & Thông báo", "color": ft.colors.AMBER_400},
+        {"title": "Bảo mật & Cài đặt", "color": ft.colors.BROWN_400},
+        {"title": "Tích hợp & Tùy chỉnh", "color": ft.colors.CYAN_400},
     ]
 
-    def on_module_click(e):
-        dlg = ft.AlertDialog(
-            title=ft.Text("Chức năng đang phát triển"),
-            content=ft.Text(f"Bạn đã chọn module: {e.control.data}"),
-            actions=[ft.TextButton("Đóng", on_click=lambda e: dlg.close())],
+    def on_button_click(e):
+        page.snack_bar = ft.SnackBar(
+            ft.Text(f"Bạn đã bấm nút: {e.control.data}"),
+            open=True,
+            duration=2000,
         )
-        page.dialog = dlg
-        dlg.open = True
         page.update()
+        print(f"Button clicked: {e.control.data}")
 
-    # Create cards for modules
-    cards = []
-    for module in modules:
-        card = ft.Container(
-            content=ft.Column(
-                [
-                    ft.Text(module["title"], size=18, weight=ft.FontWeight.BOLD),
-                    ft.Text(module["desc"], size=14, color=ft.colors.BLUE_GREY),
-                ],
-                tight=True,
-                alignment=ft.MainAxisAlignment.CENTER,
-                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            ),
-            padding=20,
-            alignment=ft.alignment.center,
-            width=250,
-            height=120,
-            bgcolor=ft.colors.WHITE,
-            border_radius=10,
-            border=ft.border.all(1, ft.colors.BLUE_200),
-            shadow=ft.BoxShadow(
-                color=ft.colors.BLUE_200,
-                blur_radius=5,
-                offset=ft.Offset(2, 2),
-            ),
+    # Create buttons for modules with pixel positioning using margin
+    buttons = []
+    for i, module in enumerate(modules):
+        btn = ft.ElevatedButton(
+            text=module["title"],
+            bgcolor=module["color"],
+            color=ft.colors.WHITE,
+            width=280,
+            height=100,
             data=module["title"],
-            on_click=on_module_click,
+            on_click=on_button_click,
+            style=ft.ButtonStyle(
+                shape=ft.RoundedRectangleBorder(radius=12),
+                padding=10,
+            ),
         )
-        cards.append(card)
+        container = ft.Container(
+            content=btn,
+            margin=ft.margin.only(
+                left=20 if i % 3 != 0 else 0,
+                top=20 if i >= 3 else 0,
+            ),
+        )
+        buttons.append(container)
 
-    # Arrange cards in 3 columns and 3 rows
+    # Arrange buttons in 3 columns and 3 rows using Row and Column with pixel margin
     grid = ft.Column(
         [
-            ft.Row(cards[0:3], alignment=ft.MainAxisAlignment.SPACE_EVENLY),
-            ft.Row(cards[3:6], alignment=ft.MainAxisAlignment.SPACE_EVENLY),
-            ft.Row(cards[6:9], alignment=ft.MainAxisAlignment.SPACE_EVENLY),
+            ft.Row(buttons[0:3], alignment=ft.MainAxisAlignment.START),
+            ft.Row(buttons[3:6], alignment=ft.MainAxisAlignment.START),
+            ft.Row(buttons[6:9], alignment=ft.MainAxisAlignment.START),
         ],
-        spacing=20,
-        alignment=ft.MainAxisAlignment.CENTER,
+        spacing=0,
+        alignment=ft.MainAxisAlignment.START,
     )
 
-    # Main layout column
-    main_column = ft.Container(
+    # Main layout container with padding
+    main_container = ft.Container(
         content=ft.Column(
             [
                 header,
@@ -130,12 +97,12 @@ def create_main_layout(page: ft.Page):
         padding=20,
     )
 
-    return main_column
+    return main_container
 
 def main(page: ft.Page):
     page.title = "Hệ thống Quản trị Camera"
-    page.window_width = 1000
-    page.window_height = 800
+    page.window_width = 1100
+    page.window_height = 850
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.START
     page.padding = 20
