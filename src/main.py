@@ -1,8 +1,19 @@
 import flet as ft
+from flet import Colors
+import logging
 from components.login import LoginPage
 from components.register import RegisterPage
 from components.forgot_password import ForgotPasswordPage
 from components.ui_utils import create_ad_container
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
 
 def main(page: ft.Page):
     page.title = "Hệ thống Quản trị Camera"
@@ -15,19 +26,19 @@ def main(page: ft.Page):
     def navigate_to(e, route):
         form_container.content = None
         if route == "login":
-            form_container.content = LoginPage(page, navigate_to)
+            form_container.content = LoginPage(page, navigate_to).build()
         elif route == "register":
-            form_container.content = RegisterPage(page, navigate_to)
+            form_container.content = RegisterPage(page, navigate_to).build()
         elif route == "forgot_password":
-            form_container.content = ForgotPasswordPage(page, navigate_to)
+            form_container.content = ForgotPasswordPage(page, navigate_to).build()
         page.update()
 
     # Khung cố định cho form
     form_container = ft.Container(
-        content=LoginPage(page, navigate_to),
+        content=LoginPage(page, navigate_to).build(),
         width=400,
         height=600,
-        bgcolor=ft.colors.with_opacity(0.95, ft.colors.BLACK),
+        bgcolor=Colors.with_opacity(0.7, Colors.BLACK),
         border_radius=10,
         alignment=ft.alignment.center,
     )
@@ -41,9 +52,9 @@ def main(page: ft.Page):
                         begin=ft.alignment.top_left,
                         end=ft.alignment.bottom_right,
                         colors=[
-                            ft.colors.BLUE_300,
-                            ft.colors.BLUE_700,
-                            ft.colors.WHITE,
+                            Colors.BLUE_300,
+                            Colors.BLUE_700,
+                            Colors.WHITE,
                         ],
                     ),
                     expand=True,
