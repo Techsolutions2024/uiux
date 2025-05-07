@@ -21,7 +21,7 @@ def create_button(text, on_click, emoji=None):
         ),
     )
 
-def create_text_field(label, password=False, emoji=None):
+def create_text_field(label, password=False, emoji=None, on_change=None):
     return ft.TextField(
         label=label,
         password=password,
@@ -30,6 +30,7 @@ def create_text_field(label, password=False, emoji=None):
         prefix=ft.Text(emoji, size=20) if emoji else None,
         bgcolor=ft.colors.with_opacity(0.9, ft.colors.WHITE),
         border_color=ft.colors.BLUE_700,
+        on_change=on_change,
     )
 
 def create_ad_container():

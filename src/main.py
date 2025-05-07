@@ -5,6 +5,7 @@ from components.login import LoginPage
 from components.register import RegisterPage
 from components.forgot_password import ForgotPasswordPage
 from components.ui_utils import create_ad_container
+from ui.widgets import SidebarMenu, CameraWidget
 
 logging.basicConfig(
     level=logging.INFO,
@@ -22,6 +23,8 @@ def main(page: ft.Page):
     page.window.resizable = True
     page.padding = 0
 
+    main_app_container = ft.Container()
+
     # Tạo layout chính: định vị form và quảng cáo theo pixel
     def navigate_to(e, route):
         form_container.content = None
@@ -31,6 +34,20 @@ def main(page: ft.Page):
             form_container.content = RegisterPage(page, navigate_to).build()
         elif route == "forgot_password":
             form_container.content = ForgotPasswordPage(page, navigate_to).build()
+        elif route == "main":
+            # Build main app interface here
+            main_app_container.content = ft.Row(
+                [
+                    SidebarMenu(on_select=lambda r: print(f"Selected menu: {r}")),
+                    ft.Container(
+                        content=ft.Text("Main app content goes here"),
+                        expand=True,
+                        padding=10,
+                    ),
+                ],
+                expand=True,
+            )
+            form_container.content = main_app_container
         page.update()
 
     # Khung cố định cho form

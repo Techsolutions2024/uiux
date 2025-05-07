@@ -2,6 +2,7 @@ import flet as ft
 import re
 from services.auth import register_user
 from components.ui_utils import create_text_field, create_button
+import flet as ft
 import logging
 
 logger = logging.getLogger("auth")
@@ -10,15 +11,43 @@ class RegisterPage:
     def __init__(self, page, navigate_to):
         self.page = page
         self.navigate_to = navigate_to
-        self.name_field = create_text_field("Họ tên", emoji="🧑‍💼")
-        self.email_field = create_text_field("Email", emoji="📧")
-        self.password_field = create_text_field("Mật khẩu", password=True, emoji="🔐")
-        self.confirm_password_field = create_text_field("Xác nhận mật khẩu", password=True, emoji="🔐")
+        self.name_field = create_text_field("Họ tên", emoji="🧑‍💼", on_change=self.on_name_change)
+        self.email_field = create_text_field("Email", emoji="📧", on_change=self.on_email_change)
+        self.password_field = create_text_field("Mật khẩu", password=True, emoji="🔐", on_change=self.on_password_change)
+        self.confirm_password_field = create_text_field("Xác nhận mật khẩu", password=True, emoji="🔐", on_change=self.on_confirm_password_change)
         self.terms_agreement = ft.Checkbox(label="Đồng ý điều khoản sử dụng", value=False)
 
     def validate_email(self, email):
         pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
         return re.match(pattern, email)
+
+    def on_name_change(self, e):
+        if e.control.value:
+            e.control.color = ft.colors.PURPLE_700
+        else:
+            e.control.color = ft.colors.BLACK
+        self.page.update()
+
+    def on_email_change(self, e):
+        if e.control.value:
+            e.control.color = ft.colors.BLUE_700
+        else:
+            e.control.color = ft.colors.BLACK
+        self.page.update()
+
+    def on_password_change(self, e):
+        if e.control.value:
+            e.control.color = ft.colors.GREEN_700
+        else:
+            e.control.color = ft.colors.BLACK
+        self.page.update()
+
+    def on_confirm_password_change(self, e):
+        if e.control.value:
+            e.control.color = ft.colors.ORANGE_700
+        else:
+            e.control.color = ft.colors.BLACK
+        self.page.update()
 
     def validate_password(self, password):
         # Password policy: at least 8 chars, one uppercase, one lowercase, one digit, one special char

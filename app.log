@@ -54,3 +54,55 @@
 2025-05-06 15:03:57,578 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
 2025-05-06 15:03:57,578 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
 2025-05-06 15:03:57,808 [INFO] flet: App session started
+2025-05-07 13:49:27,470 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 13:49:27,471 [INFO] flet: Starting up TCP server on localhost:50425
+2025-05-07 13:49:27,474 [INFO] flet: Flet app has started...
+2025-05-07 13:49:29,538 [INFO] flet: App URL: tcp://localhost:50425
+2025-05-07 13:49:29,538 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 13:49:29,539 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 13:49:29,539 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 13:49:29,901 [INFO] flet: App session started
+2025-05-07 13:58:53,792 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 13:58:53,793 [INFO] flet: Starting up TCP server on localhost:50616
+2025-05-07 13:58:53,796 [INFO] flet: Flet app has started...
+2025-05-07 13:58:53,799 [INFO] flet: App URL: tcp://localhost:50616
+2025-05-07 13:58:53,799 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 13:58:53,799 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 13:58:53,800 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 13:58:54,032 [INFO] flet: App session started
+2025-05-07 14:00:30,253 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:00:30,254 [INFO] flet: Starting up TCP server on localhost:50634
+2025-05-07 14:00:30,257 [INFO] flet: Flet app has started...
+2025-05-07 14:00:30,260 [INFO] flet: App URL: tcp://localhost:50634
+2025-05-07 14:00:30,260 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:00:30,260 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:00:30,261 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:00:30,495 [INFO] flet: App session started
+2025-05-07 14:01:09,363 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:01:09,364 [INFO] flet: Starting up TCP server on localhost:50643
+2025-05-07 14:01:09,367 [INFO] flet: Flet app has started...
+2025-05-07 14:01:09,369 [INFO] flet: App URL: tcp://localhost:50643
+2025-05-07 14:01:09,369 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:01:09,370 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:01:09,370 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:01:09,598 [INFO] flet: App session started
+2025-05-07 14:01:37,768 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:01:37,769 [INFO] flet: Starting up TCP server on localhost:50653
+2025-05-07 14:01:37,772 [INFO] flet: Flet app has started...
+2025-05-07 14:01:37,774 [INFO] flet: App URL: tcp://localhost:50653
+2025-05-07 14:01:37,774 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:01:37,775 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:01:37,775 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:01:38,016 [INFO] flet: App session started
+2025-05-07 14:04:57,476 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:04:57,477 [INFO] flet: Starting up TCP server on localhost:50727
+2025-05-07 14:04:57,480 [INFO] flet: Flet app has started...
+2025-05-07 14:04:57,483 [INFO] flet: App URL: tcp://localhost:50727
+2025-05-07 14:04:57,483 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:04:57,483 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:04:57,484 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:04:57,716 [INFO] flet: App session started
+2025-05-07 14:06:37,938 [INFO] auth: User registered: admin@gmail.com
+2025-05-07 14:06:37,938 [INFO] auth: User registered: admin@gmail.com
+2025-05-07 14:06:52,097 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:06:52,097 [INFO] auth: User logged in: admin@gmail.com
