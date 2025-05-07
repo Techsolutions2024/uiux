@@ -106,3 +106,69 @@
 2025-05-07 14:06:37,938 [INFO] auth: User registered: admin@gmail.com
 2025-05-07 14:06:52,097 [INFO] auth: User authenticated: admin@gmail.com
 2025-05-07 14:06:52,097 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:41:04,256 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:41:04,256 [INFO] flet: Starting up TCP server on localhost:51257
+2025-05-07 14:41:04,259 [INFO] flet: Flet app has started...
+2025-05-07 14:41:04,262 [INFO] flet: App URL: tcp://localhost:51257
+2025-05-07 14:41:04,262 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:41:04,263 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:41:04,263 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:41:04,500 [INFO] flet: App session started
+2025-05-07 14:41:22,838 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:41:22,838 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:45:48,758 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:45:48,759 [INFO] flet: Starting up TCP server on localhost:51300
+2025-05-07 14:45:48,762 [INFO] flet: Flet app has started...
+2025-05-07 14:45:48,764 [INFO] flet: App URL: tcp://localhost:51300
+2025-05-07 14:45:48,765 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:45:48,765 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:45:48,765 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:45:48,992 [INFO] flet: App session started
+2025-05-07 14:46:03,138 [WARNING] auth: Failed authentication attempt: admin@gmail.com
+2025-05-07 14:46:03,138 [WARNING] auth: Failed login attempt: admin@gmail.com
+2025-05-07 14:46:15,848 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:15,848 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:17,094 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:17,094 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:17,319 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:17,319 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:19,165 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:19,165 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:19,461 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:19,461 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:19,843 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:19,844 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:20,072 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:20,072 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:20,283 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:20,283 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:20,484 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:20,484 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:46:20,698 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:46:20,698 [INFO] auth: User logged in: admin@gmail.com
+2025-05-07 14:53:06,247 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:53:06,248 [INFO] flet: Starting up TCP server on localhost:51392
+2025-05-07 14:53:06,251 [INFO] flet: Flet app has started...
+2025-05-07 14:53:06,254 [INFO] flet: App URL: tcp://localhost:51392
+2025-05-07 14:53:06,254 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:53:06,255 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:53:06,255 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:53:06,493 [INFO] flet: App session started
+2025-05-07 14:53:28,561 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:53:28,562 [INFO] flet: Starting up TCP server on localhost:51397
+2025-05-07 14:53:28,565 [INFO] flet: Flet app has started...
+2025-05-07 14:53:28,567 [INFO] flet: App URL: tcp://localhost:51397
+2025-05-07 14:53:28,568 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:53:28,568 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:53:28,568 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:53:28,802 [INFO] flet: App session started
+2025-05-07 14:59:05,751 [INFO] flet: Assets path configured: C:\Users\Administrator\Downloads\uiux\src\assets
+2025-05-07 14:59:05,752 [INFO] flet: Starting up TCP server on localhost:51443
+2025-05-07 14:59:05,755 [INFO] flet: Flet app has started...
+2025-05-07 14:59:05,758 [INFO] flet: App URL: tcp://localhost:51443
+2025-05-07 14:59:05,758 [INFO] flet_desktop: Starting Flet View app...
+2025-05-07 14:59:05,758 [INFO] flet_desktop: Looking for Flet executable at: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:59:05,758 [INFO] flet_desktop: Flet View found in: C:\Users\Administrator\Downloads\uiux\.venv\lib\site-packages\flet_desktop\app\flet\flet.exe
+2025-05-07 14:59:05,995 [INFO] flet: App session started
+2025-05-07 14:59:19,695 [INFO] auth: User authenticated: admin@gmail.com
+2025-05-07 14:59:19,695 [INFO] auth: User logged in: admin@gmail.com

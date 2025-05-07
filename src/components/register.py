@@ -79,7 +79,7 @@ class RegisterPage:
                 logger.info(f"User registered: {email}")
                 self.page.snack_bar = ft.SnackBar(ft.Text("Đăng ký thành công!"))
                 self.page.snack_bar.open = True
-                self.navigate_to(e, "login")
+                self.navigate_to(e, "main")
             else:
                 logger.warning(f"Failed registration attempt: {email} (email exists)")
                 self.page.snack_bar = ft.SnackBar(ft.Text("Email đã tồn tại!"))
